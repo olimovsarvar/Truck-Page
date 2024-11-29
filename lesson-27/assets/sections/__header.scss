@@ -1,0 +1,23 @@
+@use '../mixin/index.scss' as *;
+.header{
+    &__flex{
+        @include flexContainer(flex-start, flex-start, row);
+
+        .flex__left{
+            width: 100%;
+            max-width: 45%;
+            border: 1px solid red;
+            height: 529px;
+        }
+        .flex__right{
+            border: 1px solid blue;
+            width: 100%;
+            max-width: 60%;
+            height: 529px;
+            background: url(../../images/truck.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+}

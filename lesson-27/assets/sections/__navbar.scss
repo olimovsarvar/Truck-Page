@@ -1,0 +1,126 @@
+@use '../variables.scss' as *;
+@use '../mixin/index.scss' as *;
+
+.navbar {
+    padding: 15px 0;
+
+    &__top {
+        padding: 10px 0 14px;
+        border-bottom: 1px solid $black-100;
+
+        .top__flex {
+            @include flexContainer(center, space-between, row);
+
+            .flex__left {
+                @include flexContainer(center, flex-start, row);
+                gap: 40px;
+            }
+
+            .location {
+                @include flexContainer(flex-start, flex-start, row);
+                gap: 10px;
+
+                &__icon {
+                    margin-top: 4px;
+                }
+
+                span {
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: $black-700;
+                }
+
+            }
+
+            .scheduale {
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    width: 1px;
+                    height: 50px;
+                    background: $black-100;
+                    position: absolute;
+                    left: -7%;
+                    top: -3.5px;
+                }
+
+                &__icon {
+                    margin-top: 4px;
+                }
+
+                span {
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: $black-700;
+                }
+            }
+
+            .contact {
+                display: flex;
+                align-items: flex-start;
+                gap: 12px;
+
+                div {
+                    &:nth-child(1) {
+                        padding-top: 4px;
+                    }
+
+                    &:nth-child(2) {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1px;
+
+                        a {
+                            font-size: 14px;
+                            color: $black-700;
+                            font-weight: 500;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    &__bottom {
+        @include flexContainer(center, space-between, row);
+        padding: 18px 0;
+    }
+
+    &__logo {
+        display: block;
+        width: 207px;
+        height: 41px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__list{
+        @include flexContainer(center, flex-start, row);
+        gap: 46px;
+        li{
+            a{
+                font-size: 16px;
+                color: $black-1000;
+                font-weight: 500;
+
+            }
+        }
+    }
+    &__btn{
+        @include baseBtn(179px, 40px,5px);
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+    }
+
+}
